@@ -23,7 +23,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:useCompatPadding="true"
-    android:src="android:drawable/btn_plus"
+    android:src="@drawable/ic_add_black_24dp"
     android:contentDescription="@string/add_note"
     android:tooltipText="@string/add_note"
     app:layout_constraintBottom_toBottomOf="parent"

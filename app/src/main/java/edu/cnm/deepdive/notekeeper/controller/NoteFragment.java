@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import edu.cnm.deepdive.notekeeper.R;
 import edu.cnm.deepdive.notekeeper.databinding.FragmentNoteBinding;
+import edu.cnm.deepdive.notekeeper.model.entity.Note;
 
 public class NoteFragment extends Fragment {
 
@@ -21,6 +23,9 @@ public class NoteFragment extends Fragment {
   ) {
 
     binding = FragmentNoteBinding.inflate(inflater, container, false);
+    binding.addNote.setOnClickListener((v) -> Navigation
+        .findNavController(binding.getRoot())
+        .navigate(NoteFragmentDirections.openNote()));
     return binding.getRoot();
 
   }
